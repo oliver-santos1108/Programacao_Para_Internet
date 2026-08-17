@@ -5,22 +5,30 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Linguaem HTML</title>
         <style>
-        h1{color:rgb(153, 9, 9);}
+        h1{color:rgb(16, 52, 121);
+            font-size: 5em;}
         span{font-size: 1.5em;}
         section{
-            border: 2px dotted rgb(207, 21, 21);}
-        a{color:rgb(153, 9, 9); }
+            border: 2px dotted rgb(43, 163, 233);}
+        a{color:rgb(43, 163, 233); }
+        div{
+            background-color: rgb(179, 240, 255);
+        }
+        mark{
+            color: rgba(201, 126, 252, 0.829);
+        }
     </style>
     </head>
     <body>
-        <h1><strong>HTML</strong></h1>
-        <p>linguagem de marcação criada por
+        <h1 draggable="true"><strong>HTML</strong></h1>
+        <p>Linguagem de marcação criada por
             <a href="https://pt.wikipedia.org/wiki/Tim_Berners-Lee">
                 <strong>Tim Bernes Lee</strong> <i>(1990)</i>
             </a>
         </p>
-        <img src="Sir_Tim_Berners-Lee_(cropped).jpg" alt="Sir Tim Berners-Lee">
-        <div>
+        <img src="./imagens/Sir_Tim_Berners-Lee.jpg" alt="Sir Tim Berners-Lee">
+        <div draggable="true">
+            <hr>
             <section>
                 <h2>Arquietura Cliente servidor WEB</h2>
                 <p>As tecnologia que fundamentais que compoem a WEB são:</p>
@@ -31,9 +39,38 @@
                     <li>Navegaor Cliente - </li>
                     <li>Servidor Web</li>
                 </ul>
-                <img src="cliente servidor.jpg" alt="Sir Tim Berners-Lee">
+                <img src="./imagens/clienteServidor.jpg" alt="Sir Tim Berners-Lee">
+               
+            </section>
                 <p>Ao longo dos anos, foram a web evoluiu e novas tecnologias
-                    foram incorporadas como <span>CSS</span> e JavaScript</p>
+                                    foram incorporadas como <span><mark>CSS</mark></span> e <span><mark>JavaScript</mark></span></p>
+                                <p><del>HTML é uma linguagem de programação.</del></p>
+                                    <p>a=ax+bx<sup>2</sup> +c</p>
+
+            <section id="listas">
+                <p>O HTML possui listas não ordenadas, ordenadas e detalhadas, criadas com tags: <span>ul ol dl </span> </p>
+
+                <p>Lista não ordenada</p>
+                <ul>
+                    <li>Pera</li>
+                    <li>Uva</li>
+                    <li>Maçã</li>
+                </ul>
+
+                   <p>Lista ordenada</p>
+                <ol type="1" start="1" reversed>
+                    <li>Pera</li>
+                    <li>Uva</li>
+                    <li>Maçã</li>
+                </ol>
+
+                <p>Lista ordenada</p>
+                <dl>
+                    <dt>Leite</dt>
+                    <dd>Bebida nutridica extraída de mamíferos.</dd>
+                    <dt>Café</dt>
+                    <dd>Bebida obtida com a torra e fervura de grão de café, essencial para a vida.</dd>
+                </dl>
 
             </section>
 
