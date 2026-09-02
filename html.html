@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+    <head> 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Linguaem HTML</title>
-        <style>
+        <title>Linguagem HTML</title>
+        <style> 
+        /*definir css
+        você pode definir o css pela tag <style> mas tambem colocando <link para um documento css
+        você pode também definir com o css in line, dentro de outra tag, 
+            ex: <p style = "regra css" > parágrafo </p>*/
+        *{background-color: honeydew;}
+
         h1{color:rgb(255, 146, 4);
-            font-size: 5em;}
+            font-size: 10em;}
+
         span{font-size: 1.5em;}
 
         section{border: 2px dotted rgb(255, 119, 7);}
@@ -28,13 +35,18 @@
             border-collapse: collapse;
             background-color: rgb(248, 248, 216);
         }
+
+        .textonormal{
+            background-color: crimson;
+            -webkit-text-fill-color: burlywood;
+        }
         
 
     </style>
     </head>
     <body>
         <h1 draggable="true"><strong>HTML</strong></h1>
-        <p>Linguagem de marcação criada por
+        <p style="font-size: 3em;">HTML é uma linguagem de marcação criada por
             <a href="https://pt.wikipedia.org/wiki/Tim_Berners-Lee">
                 <strong>Tim Bernes Lee</strong> <i>(1990)</i>
             </a>
@@ -66,19 +78,19 @@
             <section id="listas">
                 <p>O HTML possui listas não ordenadas, ordenadas e detalhadas,
                     criadas com tags: <span>ul ol dl </span> </p>
-                <p>Lista não ordenada</p>
+                <p class="textonormal">Lista não ordenada</p>
                 <ul>
                     <li>Pera</li>
                     <li>Uva</li>
                     <li>Maçã</li>
                 </ul>
-                <p>Lista ordenada</p>
+                <p class="textonormal">Lista ordenada</p>
                 <ol type="1" start="1">
                     <li>Pera</li>
                     <li>Uva</li>
                     <li>Maçã</li>
                 </ol>
-                <p>Lista ordenada</p>
+                <p class="textonormal">Lista ordenada</p>
                 <dl>
                     <dt>Leite</dt>
                     <dd>Bebida nutridica extraída de mamíferos.</dd>
