@@ -1,0 +1,121 @@
+<!-- Atividade 1 – Estrutura Básica HTML
+Arquivo: 1.html
+Crie um documento HTML com a estrutura básica (<!DOCTYPE html>, <html>, <head>, <body>).
+No body, escreva um pequeno texto explicando:
+ ➜ A diferença entre Internet e Web (máximo de 5 linhas).
+Coloque um comentário no código indicando o autor e a data de criação
+Ainda no body crie uma tag div e conte a história da internet e web, colocando os principais marcos, adicione fotos, tags, relatos links, marcações. (Use todas tags que vimos:em, it, mark, sub, sup, ul, li, ol, dl , dt , table, tr, td,th, caption, tbody, theader, tfoot).
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Autor: Oliver Santos - Data: 2023-10-01-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura Basica HTML</title>
+    <style>
+        span{
+            font-weight: bold;
+        }
+        table#fases, #fases td, #fases th, #fases caption{
+            border: 1px solid black;
+            border-collapse: collapse;
+            background-color: rgb(248, 248, 216);
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="1">
+        <h1>INTERNET vs WEB</h1>
+        <p>A <span>Internet</span> é a infraestrutura física e global de redes de computadores, que permite a transmissão de dados e a oferta de serviços.</p>
+        <p>A <span>WEB</span> é um sistema de gerenciamento de informações onde o usuário pode solicitar uma informação ao servidor e é respondido conforme determinados comandos.</p>
+    </div>
+
+
+    <div id="historiaInternet" class="historia">
+        <h2>História da Internet</h2>
+        <p>A história da Internet começou em 1969 com a ARPANET, uma rede criada pelo Departamento de Defesa dos EUA para interconectar centros de pesquisa universitários de forma descentralizada durante a Guerra Fria.</p>
+        <img src="img\NosARPANET.jpg" alt="Primeiros Nós da ARPANET" style="width: 50%; height: auto;">
+        
+    
+        <p>Em 1983, a ARPANET adotou o protocolo TCP/IP, que se tornou o padrão para a comunicação na Internet.
+        <br>
+        <br>
+
+        <mark>Para mais informações sobre o protocolo TCP/IP, acesse o link: <a href="https://pt.wikipedia.org/wiki/Protocolo_de_controle_de_transmiss%C3%A3o">Protocolo de Controle de Transmissão</a></mark>
+        <br>
+
+        <mark>Para mais informações sobre a história da internet, acesse o link: <a href="https://www.nationalgeographicbrasil.com/historia/2024/05/qual-e-a-origem-da-internet">História da Internet</a></mark>
+        </p>
+    </div> 
+
+
+    <div id="historiaWeb" class="historia">
+        <h2>História da Web</h2>   
+        <p> Em 1990, Tim Berners-Lee inventou a <em><i>World Wide Web (WWW)</i></em>, permitindo a criação de páginas interligadas por hyperlinks.</p>
+           
+         <img src="img\Sir_Tim_Berners-Lee.jpg" alt="Sir Tim Berners-Lee">
+
+    <h3>Linha do tempo</h3>
+    <dl>
+      <span><dt>1969 - ARPANET</dt> </span>
+      <dd>Criação da primeira rede descentralizada de computadores pelos EUA.</dd>
+
+      <span><dt>1983 - Padronização TCP/IP</dt></span>
+      <dd>Adoção do protocolo padrão que unificou as comunicações na Internet.</dd>
+
+      <span><dt>1989/1990 - Invenção da Web</dt></span>
+      <dd>Berners-Lee desenvolveu a linguagem HTML, o servidor HTTP e o primeiro navegador no CERN.</dd>
+
+      <span><dt>1993 - Navegador Gráfico (Mosaic)</dt></span>
+      <dd>Popularização da Web para o público geral com a primeira interface gráfica moderna.</dd>
+
+      <span><dt>1994 - Comercialização</dt></span>
+      <dd>Abertura da rede para empresas, e-commerce e provedores privados pelo mundo.</dd>
+    </dl>
+
+    <!-- Resumo das Eras da Web com Tabela (<table>, <caption>, <thead>, <tbody>, <tfoot>, <tr>, <th>, <td>) -->
+    <h3>Evolução da Web</h3>
+    <table id="fases">
+      <caption>Resumo das Gerações da Web</caption>
+      <thead>
+        <tr>
+          <th>Período</th>
+          <th>Funcionalidades</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1990 - 2004</td>
+          <td>Páginas estáticas e somente leitura. 
+          </td>
+        </tr>
+        <tr>
+          <td>2004 - 2014</td>
+          <td>Redes sociais, blogs e interação do usuário.</td>
+        </tr>
+        <tr>
+          <td>2014 - Presente</td>
+          <td>Dados conectados, computação em nuvem e inteligência artificial.</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2" style="text-align: center;">
+            Mais informações: <a href="https://www.wsiworld.com/blog/how-the-web-has-evolved">Evolução da Web</a>
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <!-- Pilares de Funcionamento com Lista Ordenada (<ol>, <li>) -->
+    <h3>Pilares da Web</h3>
+    <ol>
+      <li><b>HTTP:</b> Protocolo de comunicação entre cliente e servidor.</li>
+      <li><b>HTML:</b> Linguagem para estruturar e publicar o conteúdo das páginas.</li>
+      <li><b>URL:</b> Sistema de identificação único para encontrar recursos na rede.</li>
+    </ol>
+    </div>
+</body>
+</html>
