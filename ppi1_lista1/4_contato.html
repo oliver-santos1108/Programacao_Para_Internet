@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Contato</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+
+    .instrucoes {
+      background-color: rgb(231, 243, 254);
+      border-left: 6px solid rgb(33, 150, 243);
+      padding: 10px 15px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+    }
+    .campo {
+      margin-bottom: 15px;
+    }
+    input[type="text"], input[type="email"], select, textarea {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+      border: 1px solid rgb(204, 204, 204);
+      border-radius: 4px;
+      background-color: rgb(255, 255, 255);
+      color: rgb(51, 51, 51);
+    }
+   
+    
+  </style>
+</head>
+<body>
+    <!--Meu PI está sendo desenvolvido em WEB. Visto isso, utilizei uma tela de cadastro já pronta como base.-->
+
+  <a href="4_curriculo.html" class="linkar">&larr; Voltar para o Currículo</a>
+
+  <!-- Mensagem de instruções no topo -->
+  <div class="instrucoes">
+    <p><strong>Instruções:</strong> Preencha os campos abaixo para entrar em contato. Os campos marcados com * são de preenchimento obrigatório.</p>
+  </div>
+
+  <h2>Formulário de Contato</h2>
+
+  <form action="#" method="POST">
+    <div class="campo">
+      <label for="nome">Nome *</label>
+      <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+    </div>
+    <div class="campo">
+      <label for="email">E-mail *</label>
+      <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+    </div>
+    <div class="campo">
+      <label for="assunto">Assunto</label>
+      <input type="text" id="assunto" name="assunto" placeholder="Motivo do contato">
+    </div>
+    <div class="campo">
+      <label for="estado">Estado</label>
+      <select id="estado" name="estado">
+        <option value="" disabled selected>Selecione o seu estado</option>
+        <option value="AC">Acre</option>
+        <option value="AL">Alagoas</option>
+        <option value="AP">Amapá</option>
+        <option value="AM">Amazonas</option>
+        <option value="BA">Bahia</option>
+        <option value="CE">Ceará</option>
+        <option value="DF">Distrito Federal</option>
+        <option value="ES">Espírito Santo</option>
+        <option value="GO">Goiás</option>
+        <option value="MA">Maranhão</option>
+        <option value="MT">Mato Grosso</option>
+        <option value="MS">Mato Grosso do Sul</option>
+        <option value="MG">Minas Gerais</option>
+        <option value="PA">Pará</option>
+        <option value="PB">Paraíba</option>
+        <option value="PR">Paraná</option>
+        <option value="PE">Pernambuco</option>
+        <option value="PI">Piauí</option>
+        <option value="RJ">Rio de Janeiro</option>
+        <option value="RN">Rio Grande do Norte</option>
+        <option value="RS">Rio Grande do Sul</option>
+        <option value="RO">Rondônia</option>
+        <option value="RR">Roraima</option>
+        <option value="SC">Santa Catarina</option>
+        <option value="SP">São Paulo</option>
+        <option value="SE">Sergipe</option>
+        <option value="TO">Tocantins</option>
+      </select>
+    </div>
+    <div class="campo">
+      <label for="mensagem">Mensagem</label>
+      <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem aqui..."></textarea>
+    </div>
+    <button type="submit">Enviar Mensagem</button>
+  </form>
+</body>
+</html>
