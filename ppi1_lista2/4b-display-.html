@@ -4,9 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Display 2</title>
-    <link rel="stylesheet" href="estilo.css">
+    <style>
+         body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .texto{
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+         .container {
+            display: flex;       
+            width: 100%;         
+        }
+        .bloco {
+            display: inline-block;
+            width: 25%;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            font-weight: bold;
+        }
+        .b1 { background-color: blue; }
+        .b2 { background-color: green; }
+        .b3 { background-color: red; }
+        .b4 { background-color: yellow; }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <div class="bloco b1">1</div>
+        <div class="bloco b2">2</div>
+        <div class="bloco b3">3</div>
+        <div class="bloco b4">4</div>
+    </div>
     
+    <div class="texto">
+    <h1>Exibição</h1>
+    <p>Comportamento Flex (<code>display: flex</code>): O contêiner pai é configurado como um contêiner flexível, permitindo que os elementos filhos sejam dispostos em linha. Cada bloco ocupa 25% da largura do contêiner, resultando em quatro blocos alinhados horizontalmente.</p>
+    <p>O uso de <code>display: flex;</code> no contêiner permite que os elementos filhos se ajustem automaticamente ao espaço disponível, mantendo a proporção definida pelas larguras especificadas. Isso cria uma aparência de linha contínua de blocos coloridos.</p>
+    <p>O uso de <code>display: inline-block;</code> permite que os elementos sejam exibidos em linha, mas ainda assim possam ter largura e altura definidas.</p> 
+    </div>
 </body>
 </html>

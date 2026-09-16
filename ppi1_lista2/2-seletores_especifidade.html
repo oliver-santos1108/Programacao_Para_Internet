@@ -5,10 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Especificidade de seletores</title>
     <link rel="stylesheet" href="estilo.css">
+    <style>
+     /*regra 1*/ li{color:red;}
+      /*regra 2*/ .churras{color:green;}
+      /*regra 3*/ .fruta{color:gray}
+      /*regra 4*/ li+li.churras{color: black;}
+      /*regra 5*/ .churras[draggable="true"]{color: magenta;}
+      /*regra 6*/ #lip1,#lip2,#lip3{color:blue}
+      /*regra 7*/ #lip3.fruta{color:orange}
+      /*regra 8*/ ol>li.churras#lip5{color:purple}
+      </style>
 </head>
 <body>
     <h1>Especificidade de Seletores</h1>
     <img src="imgs/codigo.png" alt="Código">
-    
+    <p>A saída desse código é a seguinte:</p> 
+   <img src="imgs/saidaCodigo.png" alt="Saída do Código">  
+   <h2>Como isso acontece?</h2>
+   <dl>
+    <dt><code>li{color:red;}</code> </dt>
+    <dd>Define que todos os elementos <code>li</code> serão exibidos em vermelho.</dd>
+    <dt><code>.churras{color:green;}</code> </dt>
+    <dd>Define que todos os elementos com a classe <code>churras</code> serão exibidos em verde.</dd>
+    <dt><code>.fruta{color:gray;}</code> </dt>
+    <dd>Define que todos os elementos com a classe <code>fruta</code> serão exibidos em cinza.</dd>
+    <dt><code>li+li.churras{color: black;}</code> </dt>
+    <dd>Define que os elementos <code>li</code> que seguem imediatamente um elemento com a classe <code>churras</code> serão exibidos em preto.</dd>
+    <dt><code>.churras[draggable="true"]{color: magenta;}</code> </dt>
+    <dd>Define que os elementos com a classe <code>churras</code> e o atributo <code>draggable="true"</code> serão exibidos em magenta.</dd>
+    <dt><code>#lip1,#lip2,#lip3{color:blue}</code> </dt>
+    <dd>Define que os elementos com os IDs <code>lip1</code>, <code>lip2</code> e <code>lip3</code> serão exibidos em azul.</dd>
+    <dt><code>#lip3.fruta{color:orange}</code> </dt>
+    <dd>Define que o elemento com o ID <code>lip3</code> e a classe <code>fruta</code> será exibido em laranja.</dd>
+    <dt><code>ol>li.churras#lip5{color:purple}</code> </dt>
+    <dd > Define que o elemento com o ID <code> lip5 </code> e a classe <code> churras </code> dentro de um elemento <code > ol </code> será exibido em roxo. </dd>
+   </dl >
+   <h2>Regras</h2>
+   <p>Como o CSS escolhe qual regra aplicar quando há mais de uma regra aplicável? <br> Exemplo:</p>
+   <code> li{color:red;} <br>
+      .churras{color:green;}</code>
+    <p>Apesar de que toda a <code>li</code> será exibida em vermelho, a classe <code>churras</code> tem maior especificidade e está sendo aplicada na cor verde, mas ainda sim nenhum elemento da saída é verde.</p>
+    <p>O que ocorre são as regras de especificidade do CSS. Elas são aplicadas nessa ordem:</p>
+    <h2>1. Regra de estilo embutido (inline)</h2>
+    <p>Ela é aplicada diretamente no elemento HTML, utilizando o atributo <code>style</code>. Exemplo:</p>
+    <code>&lt;li style="color: red;"&gt;Item 1&lt;/li&gt;</code>
+    <h2>2. Regra de ID</h2>
+    <p>Ela é aplicada a um elemento HTML com um ID específico, utilizando o seletor de ID (<code>#</code>). Exemplo:</p>
+    <code>#lip1{color: blue;}</code>
+    <h2>3. Regra de classe, atributo ou pseudo-classe</h2>
+    <p>Ela é aplicada a elementos HTML com uma classe específica, utilizando o seletor de classe (<code>.</code>), ou a elementos com um atributo específico, utilizando o seletor de atributo (<code>[]</code>), ou a pseudo-classes, utilizando o seletor de pseudo-classe (<code>:</code>). Exemplo:</p>
+    <code>.churras{color: green;}<br>
+        .churras[draggable="true"]{color: magenta;}<br>
+        li+li.churras{color: black;}</code>
+    <h2>4. Regra de elemento</h2>
+    <p>Ela é aplicada a todos os elementos HTML de um determinado tipo, utilizando o seletor de elemento. Exemplo:</p>
+    <code>li{color: red;}</code> 
+    <h3>Vamos analisar em quais regras as propriedades do CSS utilizadas no código acima se encaixam:</h3>
+<dl>
+    <dt><code>li{color:red;}</code></dt>
+<dd>Regra de elemento, pois está definido por uma tag. Encaixa-se na categoria: <b>4. Regra de elemento</b>.</dd>
+<br>
+
+<dt><code>.churras{color:green;}</code></dt>
+<dd>Regra de classe, pois está definido pela classe <code>churras</code>. Encaixa-se na categoria: <b>3. Regra de classe, atributo ou pseudo-classe</b>.</dd>
+<br>
+
+<dt><code>.fruta{color:gray;}</code></dt>
+<dd>Regra de classe, pois está definido pela classe <code>fruta</code>. Encaixa-se na categoria: <b>3. Regra de classe, atributo ou pseudo-classe</b>.</dd>
+<br>
+
+<dt><code>li+li.churras{color: black;}</code></dt>
+<dd>Regra de classe combinada com tags, pois utiliza o combinador irmão adjacente (<code>+</code>) e a classe <code>churras</code>. Como a classe dita a força do seletor, encaixa-se na categoria: <b>3. Regra de classe, atributo ou pseudo-classe</b>.</dd>
+<br>
+
+<dt><code>.churras[draggable="true"]{color: magenta;}</code></dt>
+<dd>Regra de atributo combinada com classe, pois está definido pelo atributo <code>draggable</code> e pela classe <code>churras</code>. Encaixa-se na categoria: <b>3. Regra de classe, atributo ou pseudo-classe</b>.</dd>
+<br>
+
+<dt><code>#lip1,#lip2,#lip3{color:blue}</code></dt>
+<dd>Regra de ID agrupada, que define que os elementos com os IDs individuais <code>lip1</code>, <code>lip2</code> e <code>lip3</code> serão exibidos em azul. Encaixa-se na categoria: <b>2. Regra de ID</b>.</dd>
+<br>
+
+<dt><code>#lip3.fruta{color:orange}</code></dt>
+<dd>Regra de ID combinada com classe, que define que o elemento com o ID <code>lip3</code> e que também possua a classe <code>fruta</code> será exibido em laranja. Encaixa-se na categoria: <b>2. Regra de ID</b>.</dd>
+<br>
+
+<dt><code>ol>li.churras#lip5{color:purple}</code></dt>
+<dd>Regra de ID com seletores de herança, que define que o elemento com o ID <code>lip5</code> e a classe <code>churras</code>, estruturado dentro de um elemento pai <code>ol</code>, será exibido em roxo. Encaixa-se na categoria: <b>2. Regra de ID</b>.</dd>
+<br>
+</dl>
 </body>
 </html>

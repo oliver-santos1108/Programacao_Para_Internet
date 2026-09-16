@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Display 3</title>
+    <link rel="stylesheet" href="estilo.css">
     <style>
         .box{
             display: inline-block;
             width: 100px;
             height: 100px;
+            font-style: bold;
+            color:black;
         }
         #box1{
             background-color: red;
@@ -40,9 +43,9 @@
             top: 50%;
             right: 50%;
             translate: translate(-50% -50%);
+            
         }
-
-
+      
     </style>
 </head>
 <body>
@@ -53,5 +56,12 @@
         <div id="box4" class="box">box4</div>
         <div id="box5" class="box">box5</div>
     </div>
+    
+   <!-- COMENTADO PARA NÃO ATRAPALHAR A EXIBIÇÃO DOS BLOCO FIXOS 
+    <div>
+    <h1>Exibição</h1>
+    <p>Comportamento Fixed (<code>position: fixed</code>): Os elementos são posicionados em relação à janela de visualização, permanecendo fixos mesmo quando a página é rolada. Cada bloco é posicionado em um canto da tela, com o quinto bloco centralizado.</p>
+    <p>O uso de <code>position: fixed;</code> permite que os elementos sejam fixos na tela, independentemente do conteúdo da página. Isso é útil para criar elementos que devem permanecer visíveis, como barras de navegação ou botões de ação.</p>
+    </div>-->
 </body>
 </html>

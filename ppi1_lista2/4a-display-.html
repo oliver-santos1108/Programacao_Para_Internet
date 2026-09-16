@@ -1,28 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Display 1</title>
-    <link rel="stylesheet" href="estilo.css">
-</head>
-<style>
-     .container{ 
-        width: 100%;
-        height: 400px;  }
-     .box{
-            display: inline-block;
-            width: 100px;
-            height: 100px;
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
         }
-</style>
-    
+        .texto{
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        .bloco {
+            display: block;      
+            width: 100%;        
+            height: 100px;       
+            line-height: 100px; 
+            text-align: center;  
+            font-size: 14px;    
+            font-weight: bold;
+            color:black;
+        }
+        .b1 { background-color: blue; }
+        .b2 { background-color: green; }
+        .b3 { background-color: red; }
+        .b4 { background-color: yellow; }
+    </style>
+</head>
 <body>
-    <div class="container">
-        <div class="box" id="box1">box1</div>
-        <div class="box" id="box2">box2</div>
-        <div class="box" id="box3">box3</div>
-        <div class="box" id="box4">box4</div>
-    </div>
+    <div class="bloco b1">1</div>
+    <div class="bloco b2">2</div>
+    <div class="bloco b3">3</div>
+    <div class="bloco b4">4</div>
+    <div class="texto">
+    <h1>Exibição</h1>
+    <p>Comportamento Base (display: block): Elementos como a <code>&lt;div&gt;</code> nascem nativamente configurados como blocos. Mesmo que você não defina uma largura (width), eles automaticamente se expandem para preencher as laterais da tela inteira, impedindo que qualquer outro elemento fique ao lado deles. Reset de Margens (margin: 0): O navegador adiciona por padrão uma pequena margem branca ao redor do corpo da página (body).</p>
+
+    <p>No código acima, <code>margin: 0;</code> para fazer com que as cores fiquem coladas nas extremidades da janela. Além disso, como nenhum elemento recebeu float ou sistemas de grade/linha (Flexbox ou Grid com direções alteradas), o fluxo normal do HTML renderiza um bloco abaixo do outro na ordem em que aparecem no código.</p>
+     </div>
 </body>
 </html>
