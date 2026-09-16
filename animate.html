@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            font-size: 10px;
+            
+        }
+        *{
+            border: 1px solid black;
+        }
+        body{
+            height: 100vh;
+            animation: lancamento 5s ease-in-out infinite;
+        }
+        p{
+            font-size: 3rem;
+            animation: lancamento 5s ease-in-out infinite;
+        }
+
+        @keyframes lancamento{
+            0%{
+                transform: translateY(100vh)rotate(-45deg);
+            }
+            50%{
+                transform: translateY(0)rotate(30deg);
+            }
+
+            100%{
+                transform: translateY(-100vh)rotate(-45deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <p>🚀</p>
+</body>
+</html>
