@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Froggy</title>
+    <link rel="stylesheet" href="estilizacao.css">
+</head>
+<body>
+    <div id="titulo-container">
+        <img id="logo" src="img1/ffLogo.png" alt="Flexbox Froggy Logo">
+        <h1>Flexbox Froggy</h1>
+    </div>
+    <div id="sobre"><p>O Flexbox Froggy é um jogo online e gratuito criado por Thomas Park para ensinar o funcionamento do CSS Flexbox de forma divertida e interativa.
+        <br>
+        <p class="citacao">"O Flexbox também é um tema bom pois iniciantes podem aprender essa forma aprimorada de posicionamento logo de cara, e muitos desenvolvedores web experientes que ainda não o conhecem podem finalmente começar a utilizá-lo. É algo que eu mesmo pretendo aprender há algum tempo. Existem   tutoriais de excelente qualidade para esse fim, como os do CSS Tricks, Codrops e Scotch.io, mas poucas experiências de aprendizado interativo."</p> <p id="fonte">(Thomas Park, 2015)</p>
+      </p>
+    </div>
+    <div class="level">
+    <h2>Level 13</h2>
+    <img class="level13" src="img1/lvl13.png" alt="Level 13">
+    <p> 
+    O nível 13 de Flexbox Froggy requer quep jogador utilize uma combinação de <code>flex-direction</code>, <code>justify-content</code> e <code>align-items</code> para fazer com que os sapos se posicionem na vitória-régia de sua cor. 
+    </p>
+    <p class="subtitulo">solução</p>
+    <img class="level13" src="img1/codigo13.png" alt="Código">
+    <p>Para entender a solução, devemos analisar linha por linha: </p>
+    <ul>
+        <li><code>flex-direction: row-reverse</code> &rarr; Define a direção do eixo principal na horizontal e inverte a ordem dos elementos (da direita para a esquerda).</li> 
+        <li><code>justify-content: center</code> &rarr; Alinha os elementos no centro do eixo principal. Como a direção foi definida como linha invetida (row-reverse), o eixo principal é na horizontal. </li>
+        <li><code>align-items: end</code> &rarr; Alinha os elementos no final do eixo transversal, que nesse caso é verticalmente.  
+        </li>
+    </ul>
+    <p>Utilizando esse código, a solução do nível é a seguinte: </p>
+    <img class="level13" src="img1/pond13.png" alt="">
+    </div>
+
+    <div class="level">
+        <h2>Level 14</h2>
+        <img class="level13" src="img1/lvl14.png" alt="Level 14">
+        <p> 
+    O nível 14 de Flexbox Froggy requer quep jogador utilize o comando <code>order</code> para fazer com que os sapos se posicionem na vitória-régia de sua cor. 
+    </p>
+    <p class="subtitulo">solução</p>
+    <img class="level13" src="img1/codigo14.png" alt="Código">
+    <p>Para entender a solução, devemos analisar linha por linha: </p>
+    <ul>
+        <li><code>order: 1</code> &rarr; Por padrão, os elementos tem valor 0, mas usando a propriedade ordem, é possível alterar isso. Nesse caso, como o sapo verde e vermelho tem valor 0, alterar o valor do sapo amarelo para qualquer valor maior que zero faz com que ele se posicione depois dos dois outros sapos.</li>    
+    </ul>
+    <p>Utilizando esse código, a solução do nível é a seguinte: </p>
+    <img class="level13" src="img1/pond14.png" alt="">
+    </div>
+    <div id="refContainer"> 
+    <h2>Referências</h2>
+    <a class="thomas" href="https://github.com/thomaspark/flexboxfroggy.git">GitHub de Thomas Park</a>
+    <br>
+    <a class="thomas" href="https://thomaspark.co/2015/11/learning-css-layout-with-flexbox-froggy/">Learning CSS Layout with Flexbox Froggy</a>
+    </div>
+
+    <button><a href="https://flexboxfroggy.com/" target="_blank">Jogar</a></button>
+</body>
+</html>
