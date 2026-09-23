@@ -1,17 +1,14 @@
     body {
-        font-family:Arial, Helvetica, sans-serif;
+        font-family: Arial, sans-serif;
         line-height: 1.6;
         max-width: 800px;
         margin: 0 auto;
         padding: 20px;
         color: #333;
         }
-    button:hover {
-      background-color: rgb(69, 160, 73);
-    }
+  
     a{
         text-decoration: none;
-        color:#f4f4f4
     }
     a:hover{
       text-decoration: underline;
@@ -20,57 +17,23 @@
       margin-bottom: 30px;
       padding-top: 10px;
     }
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .linkar {
+      display: inline-block;
+      margin-bottom: 15px;
+      color: rgb(0, 102, 204);
+      text-decoration: none;
+    }
      button {
-      background-color: rgb(109, 209, 78);
+      background-color: rgb(76, 175, 80);
       color: rgb(255, 255, 255);
       padding: 10px 15px;
       border: none;
       border-radius: 4px;
       cursor: pointer;
-      font-size: 32px;
-      justify-content: center;
+      font-size: 16px;
     }
-    .citacao{
-      font-style: italic;
-    }
-    #fonte{
-      font-size: 14px;
-      color: #666;
-    }
-    h1{
-        font-family: 'Fredoka One', cursive;
-        color:#47b64c;
-        font-size: 70px;
-        font-style: bold;
-        margin:0;
-    }
-    .thomas{
-      color:#333
-    }
-    #logo{
-        width: 200px;
-        height: auto;
-    }
-    #titulo-container{  
-        display: flex;
-        align-items: center;
-        gap: 20px;
-    }
-    h2{
-        font-family: 'Fredoka One', cursive;
-        color:#47b64c;
-    }
-    .level13{
-        width: 80%;
-        height: auto;
-    }
-    code{
-        font-family: 'Fredoka One', cursive;  
-        color:#215824
-    }
-    .subtitulo{
-        font-family: 'Fredoka One', cursive;  
-        color: #47b64c;
-        font-size: 20px;
-    }
-  
