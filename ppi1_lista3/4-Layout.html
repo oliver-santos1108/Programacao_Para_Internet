@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeria Expansível com Flexbox</title>
+  <!-- Ícones via Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+
+  <div class="container">
+   
+    <div class="card" style="background-image: url('img1/4montanha.jpg');">
+      <div class="info">
+        <div class="icone"><i class="fa-solid fa-person-walking"></i></div>
+        <div class="texto">
+          <h3>Montanhas</h3>
+          <p>Trilhas e natureza</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card ativo" style="background-image: url('img1/4neve.jpg');">
+      <div class="info">
+        <div class="icone"><i class="fa-solid fa-snowflake"></i></div>
+        <div class="texto">
+          <h3>Neve</h3>
+          <p>Sul do Chile</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="background-image: url('img1/4floresta.jpg');">
+      <div class="info">
+        <div class="icone"><i class="fa-solid fa-tree"></i></div>
+        <div class="texto">
+          <h3>Florestas</h3>
+          <p>Vegetação e pinheiros</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="background-image: url('img1/4lago.jpg');">
+      <div class="info">
+        <div class="icone"><i class="fa-solid fa-droplet"></i></div>
+        <div class="texto">
+          <h3>Lagos</h3>
+          <p>Águas calmas</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="background-image: url('img1/4canion.jpg');">
+      <div class="info">
+        <div class="icone"><i class="fa-solid fa-gear"></i></div>
+        <div class="texto">
+          <h3>Cânions</h3>
+          <p>Paisagens rochosas</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        cards.forEach(c => c.classList.remove('ativo'));
+        card.classList.add('ativo');
+      });
+    });
+  </script>
+</body>
+</html>
