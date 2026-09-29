@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Garden</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com" rel="stylesheet">
+</head>
+
+<body>
+    <div id="titulo-container">
+        <img id="logo" src="imgs/logo.png" alt="Grid Garden Logo">
+        <!-- <h1>Grid Garden</h1>-->
+    </div>
+    <div id="sobre">
+        <p>O Grid Garden é um jogo online e gratuito criado
+            por Thomas Park para ensinar o funcionamento do CSS Grid de
+            forma divertida e interativa.
+            <br>
+        <p class="citacao">"Meu objetivo com o Grid Garden não é abordar todos os aspectos do CSS Grid, mas sim ajudar
+            os jogadores a desenvolverem uma intuição e a reconhecerem o seu potencial."</p>
+        <p id="fonte">(Thomas Park, 2017)</p>
+        </p>
+    </div>
+    <div class="level">
+        <h2>Level 13</h2>
+        <img class="level13" src="imgs/nivel19.png" alt="Level 19">
+        <p>
+            O nível 19 de Grid Garden requer que o jogador utilize a propriedade <code>order</code> para
+            fazer com que as cenouras fiquem na água e o veneno mate as outras plantas.
+        </p>
+        <p class="subtitulo">solução</p>
+        <img class="level13" src="imgs/codigoSolucao.png" alt="Código">
+        <p>Para entender a solução, devemos analisar linha por linha: </p>
+        <ul>
+            <li><code> .water{order: 0; }</code> &rarr; Aqui o jogo só deixa mais claro o que o CSS já define por
+                padrão. A ordem dos elementos é automaticamente 0 quando não estão definidos no código. Assim, a classe
+                <i>water</i> foi definida para ter ordem zero.</li>
+            <li><code>.poison{order: -1;}</code> &rarr; Quando a classe <i>poison</i> é definida para -1, neste caso,
+                significa que todos os elementos dessa classe serão posicionados antes de todos os elementos da classe
+                <i>water</i>.</li>
+
+        </ul>
+        <p>Utilizando esse código, a solução do nível é a seguinte: </p>
+        <img class="level13" src="imgs/gardenSolucao.png" alt>
+    </div>
+
+    <div id="refContainer">
+        <h2>Referências</h2>
+        <a class="thomas" href="https://github.com/thomaspark/gridgarden">GitHub de
+            Thomas Park</a>
+        <br>
+        <a class="thomas" href="https://thomaspark.co/2017/04/learning-css-grid-with-grid-garden/">Learning CSS Grid
+            with Grid Garden</a>
+    </div>
+
+    <button><a href="https://cssgridgarden.com/" target="_blank">Jogar</a></button>
+</body>
+
+</html>

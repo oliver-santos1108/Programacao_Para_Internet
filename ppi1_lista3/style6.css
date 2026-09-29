@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    padding: 15px;
+    gap: 15px;
+    background-color: #f7f5f7;
+
+    grid-template-columns: 1.5fr 1fr 1.5fr auto;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    grid-template-areas:
+        "box1 box4 box5     box5"
+        "box2 box4 box6     circulos"
+        "box3 box3 box6     circulos";
+}
+
+.box:nth-child(1) {
+    grid-area: box1;
+}
+
+.box:nth-child(2) {
+    grid-area: box2;
+}
+
+.box:nth-child(3) {
+    grid-area: box3;
+}
+
+.box:nth-child(4) {
+    grid-area: box4;
+}
+
+.box:nth-child(5) {
+    grid-area: box5;
+}
+
+.box:nth-child(6) {
+    grid-area: box6;
+}
+
+.circulos-container {
+    grid-area: circulos;
+}
+
+.box {
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+}
+
+.laranja1 {
+    background-color: #f39c12;
+}
+
+.azul {
+    background-color: #b0c4de;
+}
+
+.laranja2 {
+    background-color: #f1b136;
+}
+
+.salmao {
+    background-color: #f5b7a1;
+}
+
+.verde1 {
+    background-color: #c0ded9;
+}
+
+.verde2 {
+    background-color: #b3c868;
+}
+
+.circulos-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 5px 0;
+}
+
+.circulo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.circulo-1 {
+    background-color: #e67e22;
+}
+
+.circulo-2 {
+    background-color: #d9a5b3;
+}
+
+.circulo-3 {
+    background-color: #c2c898;
+}
+
+.circulo-4 {
+    background-color: #d1c4e9;
+}
+
+@media (max-width: 600px) {
+    body {
+        height: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "box1"
+            "box2"
+            "box3"
+            "box4"
+            "box5"
+            "box6"
+            "circulos";
+    }
+
+    .box {
+        height: 120px;
+    }
+
+    .circulos-container {
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+        margin: 15px 0;
+    }
+}
