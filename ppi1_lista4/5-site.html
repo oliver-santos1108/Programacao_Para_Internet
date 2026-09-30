@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumo de Programação Para Internet</title>
+    <link rel="stylesheet" href="style5.css">
+</head>
+
+<body>
+    <nav>
+        <a href="#historia">História da Web</a>
+        <a href="#html">HTML</a>
+        <a href="#formularios">Formulários</a>
+        <a href="#css-layout">Evolução do CSS</a>
+        <a href="#responsividade">Responsividade</a>
+    </nav>
+
+    <header class="disciplina">
+        <div>
+            <h1>Programação Para Internet</h1>
+            <p>
+                <strong>Curso:</strong> Técnico em Informática Integrado ao Ensino Médio <a class="info"
+                    href="https://www.ifsc.edu.br/tecnicos-integrados/-/visualizar/informatica/Campus-Gaspar/145/201/nO9EQhPgKNer">sobre</a><br>
+                <strong>Professor:</strong> Romulo de Aguiar Beninca <a id="email-professor" class="info"
+                    href="mailto:rbeninca@gmail.com">rbeninca@gmail.com</a> <br>
+                <strong>Carga Horária:</strong> 80h <br>
+            </p>
+        </div>
+    </header>
+
+    <hr>
+
+    <section id="historia">
+        <h2>1. História da Web e Conceitos Fundamentais</h2>
+        <h3>Linha do Tempo e Origens</h3>
+        <ul>
+            <li><strong>ARPANET (1969):</strong> Criada pelo Departamento de Defesa dos EUA para interligar laboratórios
+                de pesquisa através de uma rede distribuída e não centralizada.</li>
+            <li><strong>TCP/IP e Expansão:</strong> Nos anos 80, a adoção do protocolo TCP/IP consolidou a Internet.
+                Chegou ao Brasil em 1988 e foi liberada comercialmente em 1994.</li>
+            <li><strong>Serviços Primitivos:</strong> Antes da Web, utilizavam-se serviços como e-mail, mIRC, Gopher e
+                FTP.</li>
+        </ul>
+
+        <h3>Criação da World Wide Web (WWW)</h3>
+        <ul>
+            <li>Em <strong>1989</strong>, Tim Berners-Lee inventou a WWW no CERN para facilitar o compartilhamento de
+                documentos e conhecimento via hipertexto.</li>
+            <li>Em <strong>1990</strong>, desenvolveu o primeiro servidor/cliente HTTP e a linguagem HTML.</li>
+            <li>Em <strong>1994</strong>, fundou a W3C para criar e manter os padrões abertos da Web.</li>
+        </ul>
+
+        <h3>Internet vs. Web & Arquitetura Cliente-Servidor</h3>
+        <p>A <strong>Internet</strong> é a infraestrutura física/lógica de redes, enquanto a <strong>Web</strong> é o
+            sistema de documentos de hipertexto executado sobre ela. Na arquitetura <strong>Cliente-Servidor</strong>, o
+            cliente (navegador) envia requisições HTTP (GET, POST) e o servidor processa e retorna uma resposta com o
+            conteúdo da página.</p>
+
+        <a href="https://www.w3.org/about/history/" target="_blank" class="linkar"><i class="citacao">Saiba Mais sobre a
+                História da W3C</i></a>
+    </section>
+
+    <hr>
+
+    <section id="html">
+        <h2>2. Estrutura e Elementos do HTML</h2>
+        <p>O HTML (<em>HyperText Markup Language</em>) é uma linguagem de marcação que utiliza tags para estruturar
+            elementos na página.</p>
+
+        <h3>Estrutura Básica de um Documento HTML</h3>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Título da Página&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Título Principal&lt;/h1&gt;
+  &lt;p&gt;Parágrafo de texto.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+        <h3>Principais Tags HTML</h3>
+        <h4>Estruturais e Texto</h4>
+        <ul>
+            <li><code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code>: Cabeçalhos de tópicos</li>
+            <li><code>&lt;p&gt;</code>: Parágrafo | <code>&lt;br&gt;</code>: Quebra de linha | <code>&lt;hr&gt;</code>:
+                Linha horizontal divisória</li>
+            <li><code>&lt;pre&gt;</code>: Preserva o texto pré-formatado com espaços e quebras</li>
+        </ul>
+
+        <h4>Formatação de Texto</h4>
+        <ul>
+            <li><code>&lt;b&gt;</code> / <code>&lt;strong&gt;</code>: Texto em negrito / destaque importante</li>
+            <li><code>&lt;i&gt;</code> / <code>&lt;em&gt;</code>: Itálico / ênfase</li>
+            <li><code>&lt;mark&gt;</code>: Texto marcado | <code>&lt;small&gt;</code>: Texto menor</li>
+            <li><code>&lt;del&gt;</code>: Texto riscado | <code>&lt;ins&gt;</code>: Texto sublinhado ou inserido</li>
+            <li><code>&lt;sub&gt;</code> / <code>&lt;sup&gt;</code>: Subscrito / Sobrescrito</li>
+        </ul>
+
+        <h4>Listas, Mídia e Tabelas</h4>
+        <ul>
+            <li><code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code> e <code>&lt;li&gt;</code>: Listas desordenadas e
+                ordenadas</li>
+            <li><code>&lt;dl&gt;</code>, <code>&lt;dt&gt;</code> e <code>&lt;dd&gt;</code>: Listas de definição (termo e
+                descrição)</li>
+            <li><code>&lt;a&gt;</code> e <code>&lt;img&gt;</code>: Links e imagens</li>
+            <li><code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;td&gt;</code> e <code>&lt;th&gt;</code>:
+                Construção de tabelas com mesclagem via <code>colspan</code> e <code>rowspan</code></li>
+        </ul>
+    </section>
+
+    <hr>
+
+    <section id="formularios">
+        <h2>3. Formulários e Entradas de Dados (<code>&lt;form&gt;</code> e <code>&lt;input&gt;</code>)</h2>
+        <p>Os formulários permitem coletar dados do utilizador através dos atributos <code>action</code> (destino) e
+            <code>method</code> (<code>GET</code> ou <code>POST</code>).</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Tipo (<code id="tipo">type=""</code>)</th>
+                    <th>Descrição / Aplicação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>text</code> / <code>password</code></td>
+                    <td>Campo de texto curto / Oculta os carateres digitados</td>
+                </tr>
+                <tr>
+                    <td><code>email</code> / <code>tel</code> / <code>url</code></td>
+                    <td>Entradas com validação específica de formato</td>
+                </tr>
+                <tr>
+                    <td><code>checkbox</code> / <code>radio</code></td>
+                    <td>Seleção múltipla / Seleção de opção única</td>
+                </tr>
+                <tr>
+                    <td><code>file</code></td>
+                    <td>Envio de ficheiros do dispositivo</td>
+                </tr>
+                <tr>
+                    <td><code>date</code> / <code>time</code> / <code>datetime-local</code></td>
+                    <td>Seleção gráfica de datas e horários</td>
+                </tr>
+                <tr>
+                    <td><code>number</code> / <code>range</code></td>
+                    <td>Valores numéricos e barras deslizantes de seleção</td>
+                </tr>
+                <tr>
+                    <td><code>submit</code> / <code>reset</code> / <code>button</code></td>
+                    <td>Botões para envio, limpeza de formulário ou ações em JS</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <hr>
+
+    <section id="css-layout">
+        <h2>4. Evolução do Posicionamento e Layouts CSS</h2>
+        <ul>
+            <li><strong>Anos 90:</strong> Fluxo normal de posicionamento sequencial (de cima para baixo).</li>
+            <li><strong>CSS1 (1996):</strong> Surgimento do <code>float</code> para alinhar elementos e contornar texto.
+            </li>
+            <li><strong>CSS2 (1998):</strong> Introdução do <code>position</code> (<code>static</code>,
+                <code>relative</code>, <code>absolute</code>, <code>fixed</code>) e do <code>z-index</code>.</li>
+            <li><strong>Position Sticky (2014-2017):</strong> Híbrido entre <code>relative</code> e <code>fixed</code>
+                que reage à rolagem da página.</li>
+            <li><strong>Flexbox (2009+):</strong> Modelo unidimensional ideal para distribuir espaços e alinhar itens em
+                linha ou coluna.</li>
+            <li><strong>CSS Grid (2017):</strong> Modelo bidimensional poderoso para a construção de grelhas e layouts
+                complexos (linhas e colunas).</li>
+        </ul>
+        <img src="imgs/css-grid-poster.png" alt="">
+    </section>
+
+    <hr>
+
+    <section id="responsividade">
+        <h2>5. Design Responsivo com Media Queries</h2>
+        <p>Permite adaptar a apresentação da página conforme o tamanho do ecrã do dispositivo:</p>
+
+        <h3>Exemplos de Regras em CSS:</h3>
+        <pre><code>@media (max-width: 767px) {
+  body { background-color: lightgreen; }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  body { background-color: lightyellow; }
+}
+
+@media (min-width: 1025px) {
+  body { background-color: lightblue; }
+}</code></pre>
+    </section>
+
+    <hr>
+
+    <div>
+        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'});">Voltar ao topo</button>
+    </div>
+
+</body>
+
+</html>
