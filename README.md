@@ -6,11 +6,12 @@
 
 O projeto ainda está em desenvolvimento, mas está organizado da seguinte forma:
 
-- [x] Arquivos soltos - anotações da aula. 
+- [x] Folder html - anotações HTML da aula
+- [x] Folder js - anotações Java Script da aula
 - [x] ppi1_lista1 - lista HTML
 - [x] ppi1_lista2 - lista CSS
-- [ ] ppi1_lista3 - lista CSS Flexbox
-- [ ] ppi1_lista4 - lista CSS Grid
+- [x] ppi1_lista3 - lista CSS Flexbox
+- [x] ppi1_lista4 - lista CSS Grid
 
 ## 📫 Contribuindo para Programação_Para_Internet
 
