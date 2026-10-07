@@ -4,7 +4,7 @@
 
 ### Organização
 
-O projeto ainda está em desenvolvimento, mas está organizado da seguinte forma:
+O projeto está organizado da seguinte forma:
 
 - [x] Folder html - anotações HTML da aula
 - [x] Folder js - anotações Java Script da aula
