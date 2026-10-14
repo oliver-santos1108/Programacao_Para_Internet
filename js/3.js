@@ -64,6 +64,6 @@ console.log(itensChurrasco.filter((e,i) => {
 
 console.log(JSON.stringify(itensChurrasco));
 array2=JSON.parse("[\"bla\" , \"bla1\"]")
-console.log
+console.log(array2[1])
 
 

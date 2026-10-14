@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            font-size: large;
+        }
+        .inputs{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class= "container">
+        <div class="input">
+
+            <label for="">mínimo</label>
+            <input type="number" id="min"></input>
+            <br>
+            <label for="">máximo</label>
+            <input type="number" id="max"></input>
+
+        </div>
+        <button id="btnsortear">Sortear</button>
+        <h2 id="result">-</h2>
+    </div>
+    <script>
+        btnsortear.addEventListener("click", ()=>{
+            minimo=Number.parseFloat(min.value)
+            maximo=Number.parseFloat(max.value)
+            random = (Math.ranom()*(maximo-minimo))+minimo // retorna entre 0 e 1
+            result.innerHTML= random
+        })
+    </script>
+</body>
+</html>
