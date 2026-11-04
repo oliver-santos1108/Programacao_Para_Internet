@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O que é JavaScript?</title>
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        color: #333;
+        }
+    a{
+      text-decoration: none;
+    }
+    a:hover{
+      text-decoration: underline;
+    }
+    section , div {
+      margin-bottom: 30px;
+      padding-top: 10px;
+    }
+    p { 
+      margin: 8px 0; 
+      padding: 5px; 
+    }
+    #hora-atual{
+      color: blueviolet;
+    }
+    #nav{ 
+        font-family: sans-serif; 
+        font-size: 14px; 
+        color: #6e6e6e; 
+        background-color: #e9ecef; 
+        padding: 8px; 
+        border-left: 4px solid #007BFF; 
+        margin-bottom: 15px; 
+        border-radius: 10px; 
+    }
+     #serv{ 
+        font-family: sans-serif; 
+        font-size: 14px; 
+        color: #888888; 
+        background-color: #e9ecef; 
+        padding: 8px; 
+        border-left: 4px solid #007BFF; 
+        margin-bottom: 15px;
+        border-radius: 10px; 
+    }
+   
+        
+    </style>
+</head>
+<body>
+    <h1>O que é JavaScript?</h1>
+    <div id="antes ">
+        <h2>Antes do JavaScript</h2>
+        <p>Antes de 1995, a Web era composta por páginas estáticas, exigindo uma requisição ao servidor após qualquer alteração. Assim, não era possível:
+        </p>
+        <ol>
+            <li>Atualizar conteúdo dinamicamente</li>
+            <li>Mostrar ou esconder elementos da página</li>
+            <li>Reagir a eventos do usuário</li>
+            <li>Validar formulários no cliente</li>
+        </ol>
+    </div>
+    <div id="surgiu">
+    <h2>Como surgiu</h2>
+        <p>A <a href="https://pt.wikipedia.org/wiki/Netscape">Netscape</a> contratou <a href="https://pt.wikipedia.org/wiki/Brendan_Eich">Brendan Eich</a> para criar uma linguagem e script para o navegador. E em apenas <strong>10 dias</strong>, ele escreveu a primeira versão.</p>
+        <img src="./img/Brendan Eich.jpg" alt="Brendan Eich">
+    </div>
+    <div id="navServ">
+    <h2>Navegador X Servidor</h2>
+        <p id="nav">
+            <strong>Navegador:</strong> É a interface direta com o usuário. Quando o JavaScript roda no navegador, ele processa tudo na máquina de quem está acessando. É o responsável pela interatividade instantânea: menus que se abrem, animações, validações de formulários e atualizações visuais na tela em tempo real.
+        </p>
+        <p id="serv">
+            <strong>Servidor:</strong> É a central de processamento que fica na nuvem. Quando o código roda no servidor, ele lida com a lógica que o usuário não vê. Ele gerencia o acesso a bancos de dados, processa regras de segurança, autentica contas e envia as informações corretas que o navegador precisa exibir.
+        </p>
+   
+    </div>
+
+    <div id="sandbox">
+    <h2>Sandbox</h2>
+        <p>Um sandbox é um mecanismo de segurança usado para executar um aplicativo em um ambiente restrito. Assim como a caixa de areia física em um playground, em que as crianças podem criar o que quiserem dentro do limite sem fazer bagunça em outro lugar, o código do aplicativo tem a liberdade de ser executado em um ambiente restrito. Por exemplo, o JavaScript pode adicionar e modificar elementos na página, mas talvez não tenha acesso a um arquivo JSON externo. Isso ocorre devido a um recurso de sandbox chamado "mesma origem".</p>
+    </div>
+
+    <div id="objeto">
+    <h2>Objetos globais</h2>
+        <p>Um objeto global em JavaScript é um objeto nativo que fica sempre disponível em qualquer parte do seu código, independentemente do arquivo ou função onde você esteja escrevendo. Ele serve como o "ambiente principal" do programa e fornece as ferramentas básicas da linguagem sem que você precise importar ou criar nada</p>
+
+        <h3>Document</h3>
+        <p>O document é um objeto global disponível apenas no navegador que funciona como a representação oficial da sua página web dentro do JavaScript. Ele serve como a porta de entrada principal para o DOM  (Document Object Model), representando toda a página HTML carregada na aba atual.</p>
+
+        <h3>Console</h3>
+        <p>O console é um objeto global que funciona como a ferramenta de diagnóstico e comunicação do JavaScript. Ele serve para o programador conversar diretamente com o ambiente onde o código está rodando, permitindo enviar mensagens, testar dados e encontrar erros.</p>
+
+        <h3>Alert</h3>
+        <p>Assim como o document, o alert() é uma ferramenta exclusiva do ambiente do navegador (ela faz parte do objeto window). Se você tentar usá-la no Node.js, receberá um erro de que a função não existe, pois servidores não têm uma interface gráfica para abrir janelinhas pop-up.</p>
+    </div>
+
+    <p id="hora-atual"></p>
+
+<h2>Fontes</h2>
+<a href="https://rbeninca.github.io/web/aula1.html">Aula super tops do Romulo</a>
+<br>
+<a href="https://web.dev/articles/browser-sandbox?hl=pt-br#the_idea_of_a_sandbox">Sandbox</a>
+<br>
+<a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects">Objetos Globais</a>
+
+<script>
+    var solucao = "Revolta dos Trabalhadores"
+console.log(solucao);
+
+alert("O capitalismo falhou, falha e falhará em cada uma das sociedades aonde ele colocar os seus tentáculos que se baseiam na expropriação e na exploração do homem pelo homem");
+
+const agora = new Date();
+const horaFormat = agora.toLocaleTimeString('pt-BR')
+
+document.getElementById("hora-atual").innerHTML = "A hora atual é: " + horaFormat;
+</script>
+</body>
+</html>
+
+
+
+

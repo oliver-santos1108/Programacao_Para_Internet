@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise de Tipos e Operações JavaScript</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 20px;     
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        button { 
+            padding: 10px 20px; 
+            font-size: 16px; 
+            cursor: pointer; 
+            background-color: #007BFF; 
+            color: white; border: none; 
+            border-radius: 4px; 
+        }
+        button:hover { 
+            background-color: #0056b3; 
+        }
+        section { 
+            margin-top: 20px; 
+            padding: 15px; 
+        }
+        h2 { 
+            color: #333; 
+        }
+        p { 
+            margin: 8px 0; 
+            font-family: monospace; 
+            background-color: #f8f9fa; 
+            padding: 5px; 
+        }
+        .explicacao { 
+            font-family: sans-serif; 
+            font-size: 14px; 
+            color: #6e6e6e; 
+            background-color: #e9ecef; 
+            padding: 8px; 
+            border-left: 4px solid #007BFF; 
+            margin-bottom: 15px; 
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Análise de Tipos de Dados em JavaScript</h1>
+    <button onclick="executarAnalise()">Iniciar Análise</button>
+    <section>
+        <h2>Verificação com typeof</h2>
+        <p id="pstring">String: </p>
+        <p id="pnumero">Number: </p>
+        <p id="pbooleano">Boolean: </p>
+        <p id="pindefinido">Undefined: </p>
+        <p id="p nulo">Null: </p>
+        <p id="pobjeto">Object: </p>
+        <p id="parray">Array: </p>
+    </section>
+
+    <section>
+        <h2>Operações entre Tipos Diferentes</h2>
+        
+        <h3>1. String + Number</h3>
+        <p id="resStringNum"></p>
+        <div id="expStringNum" class="explicacao"></div>
+
+        <h3>2. Boolean * Number</h3>
+        <p id="resBoolNum"></p>
+        <div id="expBoolNum" class="explicacao"></div>
+
+        <h3>3. Null + Number</h3>
+        <p id="resNullNum"></p>
+        <div id="expNullNum" class="explicacao"></div>
+
+        <h3>4. Undefined + Number</h3>
+        <p id="resUndefNum"></p>
+        <div id="expUndefNum" class="explicacao"></div>
+    </section>
+
+    <script>
+        function executarAnalise() {
+            const vString = "Olá, Mundo!";
+            const vNumber = 42;
+            const vBoolean = true;
+            const vUndefined = undefined;
+            const vNull = null;
+            const vObject = { nome: "JavaScript", ano: 1995 };
+            const vArray =
+            
+            document.getElementById("pstring" ).innerText = "vString: " + typeof vString + " (Valor: '" + vString + "')";
+            document.getElementById("pnumero").innerText = "vNumber: " + typeof vNumber + " (Valor: " + vNumber + ")";
+            document.getElementById("pbooleano").innerText = "vBoolean: " + typeof vBoolean + " (Valor: " + vBoolean + ")";
+            document.getElementById("pindefinido" ).innerText = "vUndefined: " + typeof vUndefined + " (Valor: " + vUndefined + ")";
+            
+            document.getElementById( "p nulo").innerText = "vNull: " + typeof vNull + " (Valor: " + vNull + ")";
+            document.getElementById("pobjeto").innerText = "vObject: " + typeof vObject + " (Valor: [Objeto])";
+            document.getElementById("parray").innerText = "vArray: " + typeof vArray + " (Valor: [" + vArray + "])";
+
+            const op1 = vString + vNumber;  // Ola mundo42
+            const op2 = vBoolean * vNumber; // 1 *42 = 42
+            const op3 = vNull + vNumber;    // 0 + 42 = 42
+            const op4 = vUndefined + vNumber; //NaN
+
+            console.log("--- Operações Coercitivas do JS ---");
+            console.log("String + Number:", op1);
+            console.log("Boolean * Number:", op2);
+            console.log("Null + Number:", op3);
+            console.log("Undefined + Number:", op4);
+
+            document.getElementById("resStringNum").innerText =  op1;
+            document.getElementById("expStringNum").innerText = "O JavaScript converte o número em string e realiza uma concatenação de textos (junção).";
+
+            document.getElementById("resBoolNum").innerText =  op2;
+            document.getElementById("expBoolNum").innerText = "O booleano 'true' é implicitamente convertido para o número 1 (se fosse false, seria 0), realizando a multiplicação matemática.";
+
+            document.getElementById("resNullNum").innerText = op3;
+            document.getElementById("expNullNum").innerText = "O valor 'null' é convertido para 0 em operações matemáticas, somando-se normalmente ao número.";
+
+            document.getElementById("resUndefNum").innerText = op4;
+            document.getElementById("expUndefNum").innerText = "'undefined' representa a ausência de valor definido. Ao tentar somá-lo matematicamente, o resultado é NaN (Not a Number/Não é um Número).";
+        }
+    </script>
+</body>
+</html>
