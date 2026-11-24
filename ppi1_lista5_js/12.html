@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Local Storage</title>
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #333;
+    }
+
+    a{
+      text-decoration: none;
+    }
+    a:hover{
+      text-decoration: underline;
+    }
+    section , div {
+      margin-bottom: 30px;
+      padding-top: 10px;
+    }
+    p { 
+      margin: 8px 0; 
+      padding: 5px; 
+    }
+    button { 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    background-color: #007BFF; 
+    color: white; border: none; 
+    border-radius: 4px; 
+    }
+     button:hover { 
+         background-color: #0056b3; 
+    }
+</style>
+<body>
+
+    <input type="text" id="nameInput" placeholder="Digite seu nome">
+
+    <button id="saveButton">Salvar</button>
+
+    <p id="greeting"></p>
+
+    <script>
+        let nomeSalvo = localStorage.getItem("nome");
+
+        if (nomeSalvo) {
+            document.getElementById("greeting").innerHTML =
+                "Olá, " + nomeSalvo + "!";
+        }
+
+        document.getElementById("saveButton").addEventListener("click", function() {
+
+            let nome = document.getElementById("nameInput").value;
+
+            if (nome === "") {
+                alert("Digite seu nome!");
+                return;
+            }
+
+            localStorage.setItem("nome", nome);
+
+            document.getElementById("greeting").innerHTML =
+                "Olá, " + nome + "!";
+        });
+    </script>
+
+</body>
+</html>

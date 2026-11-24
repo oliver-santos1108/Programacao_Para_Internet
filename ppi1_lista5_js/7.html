@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Palíndromos</title>
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #333;
+    }
+
+    a{
+      text-decoration: none;
+    }
+    a:hover{
+      text-decoration: underline;
+    }
+    section , div {
+      margin-bottom: 30px;
+      padding-top: 10px;
+    }
+    p { 
+      margin: 8px 0; 
+      padding: 5px; 
+    }
+    button { 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    background-color: #007BFF; 
+    color: white; border: none; 
+    border-radius: 4px; 
+    }
+     button:hover { 
+         background-color: #0056b3; 
+    }
+</style>
+<body>
+    <h1>Verificador de Palíndromos</h1>
+    <p>Um palíndromo é uma palavra, frase, número ou sequência de símbolos que mantém a mesma leitura da esquerda para a direita e de trás para a frente. Em frases e palavras, desconsideram-se espaços, pontuação e acentos. Verifique se uma palavra é um palíndromo:</p>
+
+    <input type="text" id="palavra" placeholder="Digite uma palavra">
+
+    <button onclick="verificar()">Verificar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function verificar() {
+
+            let palavra = document.getElementById("palavra").value;
+
+            if (palavra === "") {
+                alert("Digite uma palavra!");
+                return;
+            }
+
+            let invertida = palavra.split("").reverse().join("");
+
+            if (palavra.toLowerCase() === invertida.toLowerCase()) {
+                document.getElementById("resultado").innerHTML =
+                    palavra + " é um palíndromo!";
+            } else {
+                document.getElementById("resultado").innerHTML =
+                    palavra + " não é um palíndromo!";
+            }
+        }
+    </script>
+
+</body>
+</html>

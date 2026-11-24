@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Muda Cor do Fundo</title>
+    <style>
+    body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #333;
+    }
+
+    a{
+      text-decoration: none;
+    }
+    a:hover{
+      text-decoration: underline;
+    }
+    section , div {
+      margin-bottom: 30px;
+      padding-top: 10px;
+    }
+    p { 
+      margin: 8px 0; 
+      padding: 5px; 
+    }
+    button { 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    background-color: #8d8d8d; 
+    color: white; border: none; 
+    border-radius: 4px; 
+    }
+     button:hover { 
+         background-color: #5f5e5e; 
+    }
+</style>
+</head>
+<body>
+    <h1> </h1>
+    <button onclick="mudarCor()">Mudar Cor</button>
+
+    <p id="corAtual">Cor atual: branca</p>
+
+
+    <script>
+        let cor = "#ffffff";
+
+        function mudarCor() {
+
+            cor = "#";
+
+            let caracteres = "0123456789ABCDEF";
+
+            for (let i = 0; i < 6; i++) {
+                cor += caracteres[Math.floor(Math.random() * 16)];
+            }
+
+            document.body.style.backgroundColor = cor;
+
+            document.getElementById("corAtual").innerHTML =
+                "Cor atual: " + cor;
+
+                navigator.clipboard.writeText(cor)
+                .catch(() => alert("Não foi possível copiar a cor."));
+            
+        }
+
+    </script>
+
+</body>
+</html>

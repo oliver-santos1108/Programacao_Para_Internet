@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: white;
+        }
+
+        h1 {
+            margin-top: 30px;
+        }
+
+        .calculadora {
+            width: 208px;
+            margin: 30px auto;
+            background-color: #ddd;
+            border-radius: 7px;
+            overflow: hidden;
+        }
+
+        #visor {
+            width: 100%;
+            height: 45px;
+            background-color: #222;
+            color: white;
+            font-size: 25px;
+            text-align: right;
+            box-sizing: border-box;
+            padding: 8px;
+            border: none;
+        }
+
+        .botoes {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(5, 30px);
+        }
+
+        button {
+            border: 1px solid #bbb;
+            background-color: #eee;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ccc;
+        }
+
+        .igual {
+            background-color: coral;
+            grid-column: 4;
+            grid-row: 3 / 6;
+        }
+
+        .igual:hover {
+            background-color: #f07850;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Calculadora</h1>
+    <p>prof olha que fofura ficou minha calculadora amei</p>
+
+    <div class="calculadora">
+
+        <input type="text" id="visor" value="0" readonly>
+
+        <div class="botoes">
+
+            <button onclick="operacao('+')">+</button>
+            <button onclick="operacao('-')">-</button>
+            <button onclick="operacao('*')">×</button>
+            <button onclick="operacao('/')">÷</button>
+
+            <button onclick="numero('7')">7</button>
+            <button onclick="numero('8')">8</button>
+            <button onclick="numero('9')">9</button>
+
+            <button onclick="numero('4')">4</button>
+            <button onclick="numero('5')">5</button>
+            <button onclick="numero('6')">6</button>
+
+            <button onclick="numero('1')">1</button>
+            <button onclick="numero('2')">2</button>
+            <button onclick="numero('3')">3</button>
+
+            <button onclick="numero('0')">0</button>
+            <button onclick="numero('.')">.</button>
+            <button onclick="limpar()">AC</button>
+
+            <button class="igual" onclick="calcular()">=</button>
+
+        </div>
+
+    </div>
+
+    <script>
+        let valor1 = "";
+        let valor2 = "";
+        let operador = "";
+        let novoNumero = false;
+
+        function numero(n) {
+
+            let visor = document.getElementById("visor");
+
+            if (novoNumero) {
+                visor.value = "0";
+                novoNumero = false;
+            }
+
+            if (n === "." && visor.value.includes(".")) {
+                return;
+            }
+
+            if (visor.value === "0" && n !== ".") {
+                visor.value = n;
+            } else {
+                visor.value += n;
+            }
+        }
+
+        function operacao(op) {
+
+            valor1 = document.getElementById("visor").value;
+            operador = op;
+            novoNumero = true;
+        }
+
+        function calcular() {
+
+            let visor = document.getElementById("visor");
+
+            valor2 = visor.value;
+
+            let n1 = parseFloat(valor1);
+            let n2 = parseFloat(valor2);
+            let resultado;
+
+            if (valor1 === "" || operador === "") {
+                return;
+            }
+
+            switch (operador) {
+
+                case "+":
+                    resultado = n1 + n2;
+                    break;
+
+                case "-":
+                    resultado = n1 - n2;
+                    break;
+
+                case "*":
+                    resultado = n1 * n2;
+                    break;
+
+                case "/":
+
+                    if (n2 === 0) {
+                        alert("Não é possível dividir por zero!");
+                        limpar();
+                        return;
+                    }
+
+                    resultado = n1 / n2;
+                    break;
+            }
+
+            visor.value = resultado;
+
+            valor1 = "";
+            valor2 = "";
+            operador = "";
+            novoNumero = true;
+        }
+
+        function limpar() {
+
+            document.getElementById("visor").value = "0";
+
+            valor1 = "";
+            valor2 = "";
+            operador = "";
+            novoNumero = false;
+        }
+    </script>
+
+</body>
+</html>

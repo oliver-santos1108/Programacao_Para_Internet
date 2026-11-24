@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Numeros Primos</title>
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #333;
+    }
+
+    a{
+      text-decoration: none;
+    }
+    a:hover{
+      text-decoration: underline;
+    }
+    section , div {
+      margin-bottom: 30px;
+      padding-top: 10px;
+    }
+    p { 
+      margin: 8px 0; 
+      padding: 5px; 
+    }
+    button { 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    background-color: #007BFF; 
+    color: white; border: none; 
+    border-radius: 4px; 
+    }
+     button:hover { 
+         background-color: #0056b3; 
+    }
+</style>
+<body>
+
+    <h1>Verificador de Números Primos</h1>
+
+    <label>Número inicial:</label>
+    <input type="number" id="inicio">
+
+    <br><br>
+
+    <label>Número final:</label>
+    <input type="number" id="fim">
+
+    <br><br>
+
+    <button onclick="verificar()">Verificar</button>
+
+    <div id="resultadoPrimos"></div>
+
+    <script>
+        function ehPrimo(n) {
+
+            if (n < 2) {
+                return false;
+            }
+
+            for (let i = 2; i <= Math.sqrt(n); i++) {
+                if (n % i === 0) {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        function verificar() {
+
+            let inicio = parseInt(document.getElementById("inicio").value);
+            let fim = parseInt(document.getElementById("fim").value);
+
+            if (isNaN(inicio) || isNaN(fim)) {
+                alert("Preencha os dois campos!");
+                return;
+            }
+
+            if (inicio > fim) {
+                let auxiliar = inicio;
+                inicio = fim;
+                fim = auxiliar;
+            }
+
+            let primos = [];
+
+            for (let i = inicio; i <= fim; i++) {
+                if (ehPrimo(i)) {
+                    primos.push(i);
+                }
+            }
+            document.getElementById("resultadoPrimos").innerHTML =
+                "Números primos encontrados: " +
+                (primos.length > 0 ? primos.join(", ") : "Nenhum número primo encontrado.");
+        }
+    </script>
+
+</body>
+</html>

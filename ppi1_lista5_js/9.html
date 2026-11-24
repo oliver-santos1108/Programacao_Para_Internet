@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Muda de Cor</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+            padding: 50px;
+        }
+
+        h1 {
+            padding: 20px;
+            background-color: lightblue;
+        }
+
+        p {
+            padding: 20px;
+            background-color: lightgray;
+        }
+
+        button {
+            padding: 10px 20px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <p>Pressione a tecla de espaço para mudar as cores!</p>
+
+    <script>
+        function corAleatoria() {
+
+            let cor = "#";
+            let caracteres = "0123456789ABCDEF";
+
+            for (let i = 0; i < 6; i++) {
+                cor += caracteres[Math.floor(Math.random() * 16)];
+            }
+
+            return cor;
+        }
+
+        document.addEventListener("keydown", function(event) {
+
+            if (event.code === "Space") {
+
+                event.preventDefault();
+
+                document.body.style.backgroundColor = corAleatoria();
+
+                document.querySelector("h1").style.backgroundColor =
+                    corAleatoria();
+
+                document.querySelector("p").style.backgroundColor =
+                    corAleatoria();
+
+                document.querySelector("button").style.backgroundColor =
+                    corAleatoria();
+            }
+
+        });
+    </script>
+
+</body>
+</html>
