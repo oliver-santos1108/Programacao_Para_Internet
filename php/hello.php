@@ -16,8 +16,8 @@
     $array = ""; //declarando array como String
     $array = array(); //falando que essa string é um Array de String
     $array = ["pera", "maçã", "banana"]; //preenchendo o array
-    echo "<br>";
-    print_r($array);
+    echo "<br>";+
+    print_r($array); //exibir array
 
     echo "<ul>";
     for($i=0; $i<=($array); $i++){
