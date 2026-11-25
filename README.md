@@ -1,4 +1,4 @@
-># Programação Para Internet
+# Programação Para Internet
 
 > O presente projeto busca suprir todas as demandas da diciplina de Programação Para Internet do curso de informática do Instituto Federal de Santa Catarina.
 
@@ -13,17 +13,9 @@ O projeto está organizado da seguinte forma:
 - [x] ppi1_lista2 - lista CSS
 - [x] ppi1_lista3 - lista CSS Flexbox
 - [x] ppi1_lista4 - lista CSS Grid
-- [ ] ppi1_lista5_js - lista JS
+- [x] ppi1_lista5_js - lista JS
+- [ ] ppi1_lista6_php - lista php
 
-## 📫 Contribuindo para Programação_Para_Internet
 
-Para contribuir com o projeto, siga estas etapas:
-
-1. Bifurque este repositório.
-2. Crie um branch: `git checkout -b <nome_branch>`.
-3. Faça suas alterações e confirme-as: `git commit -m '<mensagem_commit>'`
-4. Envie para o branch original: `git push origin <nome_do_projeto> / <local>`
-5. Crie a solicitação de pull.
->
 >[!NOTE]
-> Qualquer dúvida ou sugestão contate oliver.cs11@aluno.ifsc.edu.br
+> Dúvidas: oliver.cs11@aluno.ifsc.edu.br
