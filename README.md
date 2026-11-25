@@ -6,9 +6,10 @@
 
 O projeto está organizado da seguinte forma:
 
-- [x] Folder html_aula - anotações HTML da aula
-- [x] Folder html_js - anoações HTML para linkar com os códigos js
-- [x] Folder js - anotações JavaScript da aula
+- [x] html_aula - anotações HTML da aula
+- [x] html_js - anoações HTML para linkar com os códigos js
+- [x] js - anotações JavaScript da aula
+- [x] php - anotações PHP da aula
 - [x] ppi1_lista1 - lista HTML
 - [x] ppi1_lista2 - lista CSS
 - [x] ppi1_lista3 - lista CSS Flexbox
